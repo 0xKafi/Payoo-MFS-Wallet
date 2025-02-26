@@ -8,6 +8,35 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    <!-- login page -->
+     <section class="min-h-screen max-w-md mx-auto py-6 bg-base-200">
+        	<div class=" flex flex-col h-60 w-60 mx-auto justify-center items-center">
+                <img class="w-40 relative top-10" src="./assets/bg.png" alt="logo">
+                <img class="w-16 relative bottom-16" src="./assets/Group.png" alt="logo">
+            </div>
 
+            <!-- login section -->
+            <div class="hero bg-base-200">
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0">
+                    <form class="card-body">
+                      <fieldset class="fieldset">
+
+                        <label class="fieldset-label">Account Number</label>
+                        <input  id="account-num" value="01312456789" type="number" class="input" placeholder="Account Number" required />
+
+                        <label class="fieldset-label">PIN Number</label>
+                        <input id="pin-num" value="1234" type="number" class="input" placeholder="PIN Number" required />
+
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                        <button id="login-btn" class="btn btn-neutral mt-4">Login</button>
+
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+     </section>
+
+     <script src="scripts/login.js"></script>
 </body>
 </html>
