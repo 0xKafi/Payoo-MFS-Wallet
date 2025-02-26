@@ -6,8 +6,94 @@
     <title>Payoo Wallet</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Main Page</h1>
+<body class="font-[outfit] bg-gray-900">
+
+    <section class="min-h-screen max-w-sm mx-auto bg-base-200 bg-[#f4f5f7]">
+        <section class="bg-white py-5 rounded-b-2xl">
+            <header class="border-[#0808081A] border-b h-15">
+                <div class="w-9/10 mx-auto flex justify-between items-center">
+                    <div class="flex">
+                        <img class="w-12 mr-2" src="./assets/Group.png" alt="">
+                        <div>
+                            <p class="font-bold mb-1">$<span id="balance">4500</span></p>
+                            <p class="font-light text-xs text-[#08080880]">Available Balance</p>
+                        </div>
+                    </div>
+                    <button class="h-10 text-[#08080880] border-[#0808081A] border rounded-lg px-5 text-sm">Log Out</button>
+                </div>
+            </header>
+    
+            <section class="w-9/10 mx-auto mb-10">
+                <div class="my-4">
+                    <p class="font-bold text-xl"><span>🔥</span>Welcome to Payooo!</p>
+                    <p class="text-sm text-[#08080880] mt-2">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+                </div>
+    
+                <!-- card-section -->
+                 <div class="grid grid-cols-3 gap-4">
+    
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                        <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
+                        <p class="text-xs">Add Money</p>
+                    </div>
+    
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                        <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
+                        <p class="text-xs">Add Money</p>
+                    </div>
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                        <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
+                        <p class="text-xs">Add Money</p>
+                    </div>
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                        <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
+                        <p class="text-xs">Add Money</p>
+                    </div>
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                        <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
+                        <p class="text-xs">Add Money</p>
+                    </div>
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                        <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
+                        <p class="text-xs">Add Money</p>
+                    </div>
+                 </div>
+            </section>
+        </section>
+        <!-- add money -->
+         <section class="w-9/10 mx-auto">
+            <p class="mt-5">Add Money</p>
+            <!-- form -->
+            <div class="hero h-110">
+                <div class="card bg-base-100 w-full max-w shrink-0">
+                  <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label for="mySelect" class="fieldset-label">Select A Bank</label>
+                        <select required class="select select-bordered w-full max-w-xs">
+                            <option  disabled selected>Select Bank</option>
+                            <option value="bracBank">Brac Bank</option>
+                            <option value="dbbl">DBBL</option>
+                            <option value="islamiBank">Islami Bank</option>
+                          </select>
+    
+                        <label class="fieldset-label">Bank Account Number</label>
+                        <input  id="account-num" value="01312456789" type="number" class="input" placeholder="Enter Bank Account Number" required />
+    
+                        <label class="fieldset-label">Amount to Add</label>
+                        <input  id="amount" value="" type="number" class="input" placeholder="Add Amount to withdrew" required />
+    
+                        <label class="fieldset-label">PIN Number</label>
+                        <input id="pin-num" value="1234" type="number" class="input" placeholder="PIN Number" required />
+
+                        <button id="add-money-btn" class="btn btn-neutral mt-4">Add Money</button>
+                      </fieldset>
+                  </form>
+         </section>
+    </section>  
+    <script src="scripts/addmoney.js"></script>
 </body>
 </html>
