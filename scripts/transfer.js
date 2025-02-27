@@ -1,14 +1,12 @@
-// cash-out
-document.querySelector("#cash-out-btn").addEventListener("click", function(event){
+document.getElementById("transfer-btn").addEventListener("click", function(event){
     event.preventDefault();
+    const agentNumber = document.getElementById("user-account-num").value;
+    const pinNumber = document.getElementById("pin-num").value;
 
-    const agentNumber = document.querySelector("#cash-out-account-num").value;
-    const pinNumber = document.querySelector("#pin-num").value;
-
-    const amount = document.querySelector("#cash-out-amount").value;
+    const amount = document.getElementById("transfer-amount").value;
     const convertedAmount = parseInt(amount);
     // account balance
-    const accountBalance = document.querySelector("#balance");
+    const accountBalance = document.getElementById("balance");
     const oldABalance = accountBalance.innerText;
     const convertedOldBalance = parseInt(oldABalance);
 
