@@ -13,6 +13,7 @@
 <body class="font-[outfit] bg-gray-900">
 
     <section class="min-h-screen max-w-sm mx-auto bg-base-200 bg-[#f4f5f7]">
+
         <section class="bg-white py-5 rounded-b-2xl">
             <header class="border-[#0808081A] border-b h-15">
                 <div class="w-9/10 mx-auto flex justify-between items-center">
@@ -23,41 +24,41 @@
                             <p class="font-light text-xs text-[#08080880]">Available Balance</p>
                         </div>
                     </div>
-                    <button class="h-10 text-[#08080880] border-[#0808081A] border rounded-lg px-5 text-sm">Log Out</button>
+                    <button id="logout-btn" class="h-10 text-[#08080880] border-[#0808081A] border rounded-lg px-5 text-sm">Log Out</button>
                 </div>
             </header>
     
-            <section class="w-9/10 mx-auto mb-10">
-                <div class="my-4">
+            <section class="w-9/10 mx-auto mb-5">
+                <div class="my-5">
                     <p class="font-bold text-xl"><span>🔥</span>Welcome to Payooo!</p>
-                    <p class="text-sm text-[#08080880] mt-2">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+                    <p class="text-sm text-[#08080880] mt-3">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
                 </div>
     
                 <!-- card-section -->
-                 <div class="grid grid-cols-3 gap-4">
+                 <div class="grid grid-cols-3 gap-5 mt-8">
     
-                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                    <div id="add-money" class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center cursor-pointer">
                         <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
                         <p class="text-xs">Add Money</p>
                     </div>
     
-                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                    <div id="cash-out" class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center cursor-pointer">
+                        <img class="w-6 mb-2" src="./assets/cashout.png" alt="Cashout">
+                        <p class="text-xs">Cash Out</p>
+                    </div>
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center cursor-pointer">
                         <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
                         <p class="text-xs">Add Money</p>
                     </div>
-                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center cursor-pointer">
                         <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
                         <p class="text-xs">Add Money</p>
                     </div>
-                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center cursor-pointer">
                         <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
                         <p class="text-xs">Add Money</p>
                     </div>
-                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
-                        <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
-                        <p class="text-xs">Add Money</p>
-                    </div>
-                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center">
+                    <div class="py-4 border-[#0808081A] border rounded-xl flex flex-col items-center cursor-pointer">
                         <img class="w-6 mb-2" src="./assets/addmoney.png" alt="add Money">
                         <p class="text-xs">Add Money</p>
                     </div>
@@ -65,10 +66,10 @@
             </section>
         </section>
         <!-- add money -->
-         <section class="w-9/10 mx-auto">
+         <section id="add-money-form"  class="w-9/10 mx-auto hidden">
             <p class="mt-5">Add Money</p>
             <!-- form -->
-            <div class="hero h-110">
+            <div class="hero my-5">
                 <div class="card bg-base-100 w-full max-w shrink-0">
                   <form class="card-body">
                     <fieldset class="fieldset">
@@ -81,19 +82,48 @@
                           </select>
     
                         <label class="fieldset-label">Bank Account Number</label>
-                        <input  id="account-num" value="01312456789" type="number" class="input" placeholder="Enter Bank Account Number" required />
+                        <input  id="account-num" value="01312456789" type="number" class="input" placeholder="Enter 11 digit account number" required />
     
                         <label class="fieldset-label">Amount to Add</label>
-                        <input  id="amount" value="" type="number" class="input" placeholder="Add Amount to withdrew" required />
+                        <input  id="amount" value="" type="number" class="input" placeholder="Amount" required />
     
-                        <label class="fieldset-label">PIN Number</label>
-                        <input id="pin-num" value="1234" type="number" class="input" placeholder="PIN Number" required />
+                        <label class="fieldset-label">Pin Number</label>
+                        <input id="pin-num" value="1234" type="number" class="input" placeholder="Enter 4 digit pin number" required />
 
-                        <button id="add-money-btn" class="btn btn-neutral mt-4">Add Money</button>
+                        <button id="add-money-btn" class="btn btn-neutral mt-4">Withdrew Money</button>
                       </fieldset>
                   </form>
+                </div>
+            </div>
          </section>
+
+            <!-- cash out -->
+         <section id="cash-out-form"  class="w-9/10 mx-auto hidden">
+            <p class="mt-5">Cashout</p>
+            <!-- form -->
+            <div class="hero my-5">
+                <div class="card bg-base-100 w-full max-w shrink-0">
+                  <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="fieldset-label">Agent Number</label>
+                        <input  id="cash-out-account-num" value="01312456789" type="number" class="input" placeholder="Enter 11 digit number" required />
+    
+                        <label class="fieldset-label">Amount</label>
+                        <input  id="cash-out-amount" value="" type="number" class="input" placeholder="Enter Amount to withdrew" required />
+    
+                        <label class="fieldset-label">Pin Number</label>
+                        <input id="cash-out-pin-num" value="1234" type="number" class="input" placeholder="Enter 4 digit pin number" required />
+
+                        <button id="cash-out-btn" class="btn btn-neutral mt-4">Withdrew</button>
+                      </fieldset>
+                  </form>
+                </div>
+            </div>
+         </section>
+
     </section>  
-    <script src="scripts/addmoney.js"></script>
+    <script src="./scripts/addmoney.js"></script>
+    <script src="./scripts/cashout.js"></script>
+    <script src="./scripts/toggle.js"></script>
 </body>
 </html>
